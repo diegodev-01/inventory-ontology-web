@@ -1,5 +1,6 @@
 import { DocIcon } from '@/assets/DocIcon'
 import './search-results.css'
+import { Spinner } from '../spinner/Spinner'
 
 interface SearchResult {
   sujeto: string
@@ -16,7 +17,11 @@ interface Props {
 export const SearchResults = ({ results, loading, error }: Props) => {
   return (
     <div className="results-container">
-      {loading && <p className="loading">Cargando...</p>}
+      {loading && (
+        <div className="loading" style={{ display: 'flex', justifyContent: 'center' }}>
+          <Spinner />
+        </div>
+      )}
       {error && <p className="error">{error}</p>}
 
       {!loading && !error && results.length === 0 && (
