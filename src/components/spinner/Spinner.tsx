@@ -1,6 +1,3 @@
-// Spinner.tsx
-import React from 'react'
-
 export const Spinner = () => (
   <div
     style={{
@@ -14,10 +11,3 @@ export const Spinner = () => (
     }}
   />
 )
-
-// Añade animación global en tu CSS principal (ej. App.css):
-/* 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-*/
